@@ -4,7 +4,6 @@ import requests
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-import user_agent
 import random
 import logging
 from db.models import Base

@@ -94,11 +94,11 @@ class Miaopai(object):
                     for chunk in r.iter_content(chunk_size=1024):
                         if chunk:  # filter out keep-alive new chunks
                             f.write(chunk)
-                logger.debug(' sleep 2s '.center(60, '-'))
+                logger.debug(' sleep 1s '.center(60, '-'))
                 video.download = True
-                session.add(video)
-                session.commit()
-                time.sleep(2)
+                self.session.add(video)
+                self.session.commit()
+                time.sleep(1)
             else:
                 logger.debug('video has downloaded')
 
